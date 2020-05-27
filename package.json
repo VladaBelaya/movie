@@ -1,0 +1,29 @@
+{
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladaBelaya/movie.git"
+  },
+  "author": "Vlada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladaBelaya/movie/issues"
+  },
+  "homepage": "https://github.com/VladaBelaya/movie#readme"
+}
