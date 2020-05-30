@@ -1,10 +1,19 @@
 .catalog
-    padding: 80px 90px 110px 90px
+
     background-color: #f5f6f6
     &__menu
+        position: relative
         display: flex
         justify-content: space-between
-        padding: 0 5px 0 13px
+        &::after
+            content: ''
+            border-bottom: 1px #c9c9c9 solid
+            width: 100%
+            position: absolute
+            top: 50px
+            
+             
+
         
     &__ul
         ul
@@ -44,9 +53,9 @@
 
     &__decors
         display: flex
-        justify-content: space-around
+        justify-content: space-between
         align-items: center
-        width: 100px
+        width: 90px
         height: 40px
         
     &__decor
@@ -69,4 +78,6 @@
         background-color: #9e9e9e
         margin: 3px 0
         border-radius: 2px
-
+    &__cards
+        display: flex
+        justify-content: space-between
