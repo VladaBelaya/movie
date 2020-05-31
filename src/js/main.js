@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cardsContainer = document.querySelector('.catalog__cards');
+    const cardsContainer = document.querySelector('.catalog__cards')
+          arrowBtn = document.querySelector('.arrow-down');
 
     const movieDb = [
         {
@@ -154,6 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
             card[idx].classList.remove('is-flipped')
             overlay[idx].classList.add('isHide')
         })
+    })
+
+    arrowBtn.addEventListener('click', () => {
+        arrowBtn.classList.toggle('arrow-active')
     })
 
     cardsTitle.forEach(x => checkLength(x, 20))

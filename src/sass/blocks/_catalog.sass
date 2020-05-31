@@ -38,18 +38,13 @@
                 &:nth-child(7)
                     margin-right: 0
                     padding: 0 5px
-            li.down 
+            li.arrow-down
                 transform: rotate(90deg)
                 font-weight: 700
                 font-size: 30px
                 border: none
-    hr 
-        border-bottom: none
-        background-color: #f5f6f6
-        margin: -15px 13px -17px 13px
-        max-width: 1730px
-        
-        
+                transition: transform 0.5s
+
 
     &__decors
         display: flex
@@ -82,3 +77,6 @@
         display: flex
         justify-content: space-between
         flex-wrap: wrap
+
+.arrow-active
+    transform: rotate(0) !important
