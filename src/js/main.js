@@ -144,11 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsTitle = document.querySelectorAll('.card__title'),
         cardsText = document.querySelectorAll('.card__text');
 
-    cardsTitle.forEach((x, idx) => {
-        checkLength(x, 20)
-        checkLength(cardsText[idx], 40)
-    })
-
     card.forEach((x, idx) => {
         x.addEventListener('click', () => {
             x.classList.add('is-flipped')
@@ -160,6 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay[idx].classList.add('isHide')
         })
     })
+
+    cardsTitle.forEach(x => checkLength(x, 20))
+    cardsText.forEach(x => checkLength(x, 40))
 
 })
 
