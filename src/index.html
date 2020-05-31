@@ -28,10 +28,10 @@
               /></a>
             </div>
             <div class="header__item">
-              <a href="#" class="header__sign">Sign in</a>
+              <a href="#" class="header__sign">Войти</a>
             </div>
             <div class="header__item">
-              <button class="button">Sign up</button>
+              <button class="button">Регистрация</button>
             </div>
           </div>
         </header>
@@ -44,14 +44,14 @@
         </div>
         <div class="promo__info">
           <div class="promo__text">
-            <h1 class="promo__title">The Jungle Book</h1>
+            <h1 class="promo__title">Книга джунглей</h1>
             <div class="promo_descr">
               <ul class="promo__ul">
-                <li>Adventure</li>
-                <li>Drama</li>
-                <li>Family</li>
-                <li>Fantasy</li>
-                <li>1h 46m</li>
+                <li>Приключение</li>
+                <li>Драма</li>
+                <li>Семейный</li>
+                <li>Фэнтези</li>
+                <li>1ч 46м</li>
               </ul>
             </div>
             <div class="promo__rating">
@@ -66,9 +66,9 @@
             </div>
           </div>
           <div class="promo__buttons">
-            <button class="button">Watch Now</button>
-            <button class="button button_opacity">View Info</button>
-            <a class="promo__favorites" href="#">+ Favorites</a>
+            <button class="button">Смотреть</button>
+            <button class="button button_opacity">Инфо</button>
+            <a class="promo__favorites" href="#">+ Избранное</a>
           </div>
         </div>
       </div>
@@ -78,12 +78,12 @@
         <div class="catalog__menu">
           <div class="catalog__ul">
             <ul>
-              <li>Trending</li>
-              <li>Top Rated</li>
-              <li>New Arrivals</li>
-              <li>Trailers</li>
-              <li>Coming Soon</li>
-              <li>Genre</li>
+              <li>Тренды</li>
+              <li>Высокий рейтинг</li>
+              <li>Новинки</li>
+              <li>Трейлеры</li>
+              <li>Скоро</li>
+              <li>Жанры</li>
               <li class="down">&#8250;</li>
             </ul>
           </div>
@@ -101,65 +101,9 @@
           </div>
         </div>
 
-        <div class="catalog__cards">
-          <div class="card">
-            <div class="card__face card__face--front">
-              <div class="card__img">
-                <img src="./img/tarzan.png" alt="tarzan" />
-              </div>
-              <div class="card__descrs">
-                <div class="card__descr">
-                  <div class="card__title">The Legend of Ta...</div>
-                  <div class="card__text">Action, Adventure, Drama</div>
-                </div>
-                <div class="card__rating">4.3</div>
-              </div>
-            </div>
-
-            <div class="card__face card__face--back">
-              <div class="card_two">
-                <div class="card__options">
-                  <button class="card__btn_close">&times;</button>
-                  <a class="card__favorites" href="#">+ Favorites</a>
-                </div>
-                <div class="card__blocks">
-                  <div class="card__two-descrs">
-                    <div class="card__descr">
-                      <div class="card__title card__title_white">
-                        The Legend of Ta...
-                      </div>
-                      <div class="card__text">Action, Adventure, Drama</div>
-                    </div>
-                    <div class="card__rating card__rating_white">4.3</div>
-                  </div>
-    
-                  <div class="card__block">
-                    There are growing dangers in the wizarding world of 1926 New
-                    York. Something mysterious is leaving a path of destruction in
-                    the streets, threatening to expose the wizarding
-                  </div>
-                </div>
-                <div class="card__button">
-                  <button class="button button_card">Watch Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="catalog__cards"></div>
     </section>
-    <script>
-      const card = document.querySelector('.card'),
-            closeBtn = document.querySelector('.card__btn_close');
-
-        card.addEventListener( 'click', event => {
-          card.classList.add('is-flipped')
-        })
-
-        closeBtn.addEventListener('click', event => {
-          event.stopPropagation()
-          card.classList.remove('is-flipped')
-        })
+    <script src="js/main.js" defer>
     </script>
   </body>
 </html>
