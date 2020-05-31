@@ -78,50 +78,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const $createCards = (data, idx) => {
         const $el = `
- <div class="card">
- <div class="overlay isHide" style="background-image: url(${data.image}card_${idx + 1}.png);"></div>
- <div class="card__face card__face--front">
-   <div class="card__img">
-     <img src="${data.image}card_${idx + 1}.png" alt="${data.name}" />
-   </div>
-   <div class="card__descrs">
-     <div class="card__descr">
-       <div class="card__title">${data.name}</div>
-       <div class="card__text">${data.genre}</div>
-     </div>
-     <div class="card__rating">${data.rating}</div>
-   </div>
- </div>
-
- <div class="card__face card__face--back">
-   <div class="card_two">
-     <div class="card__options">
-       <button class="card__btn_close">&times;</button>
-       <a class="card__favorites" href="#">+ Favorites</a>
-     </div>
-     <div class="card__blocks">
-       <div class="card__two-descrs">
-         <div class="card__descr">
-           <div class="card__title card__title_white">
-             ${data.name}
-           </div>
-           <div class="card__text">${data.genre}</div>
-         </div>
-         <div class="card__rating card__rating_white">${data.rating}</div>
-       </div>
-
-       <div class="card__block">
-         There are growing dangers in the wizarding world of 1926 New
-         York. Something mysterious is leaving a path of destruction in
-         the streets, threatening to expose the wizarding
-       </div>
-     </div>
-     <div class="card__button">
-       <button class="button button_card">Смотреть</button>
-     </div>
-   </div>
- </div>
-</div>
+             <div class="card">
+             <div class="overlay isHide" style="background-image: url(${data.image}card_${idx + 1}.png);"></div>
+             <div class="card__face card__face--front">
+               <div class="card__img">
+                 <img src="${data.image}card_${idx + 1}.png" alt="${data.name}" />
+               </div>
+               <div class="card__descrs">
+                 <div class="card__descr">
+                   <div class="card__title">${data.name}</div>
+                   <div class="card__text">${data.genre}</div>
+                 </div>
+                 <div class="card__rating">${data.rating}</div>
+               </div>
+             </div>
+            
+             <div class="card__face card__face--back">
+               <div class="card_two">
+                 <div class="card__options">
+                   <button class="card__btn_close">&times;</button>
+                   <a class="card__favorites" href="#">+ Favorites</a>
+                 </div>
+                 <div class="card__blocks">
+                   <div class="card__two-descrs">
+                     <div class="card__descr">
+                       <div class="card__title_white">
+                         ${data.name}
+                       </div>
+                       <div class="card__text">${data.genre}</div>
+                     </div>
+                     <div class="card__rating card__rating_white">${data.rating}</div>
+                   </div>
+            
+                   <div class="card__block">
+                     There are growing dangers in the wizarding world of 1926 New
+                     York. Something mysterious is leaving a path of destruction in
+                     the streets, threatening to expose the wizarding
+                   </div>
+                 </div>
+                 <div class="card__button">
+                   <button class="button button_card">Смотреть</button>
+                 </div>
+               </div>
+             </div>
+            </div>
  `
         return $el
     }
