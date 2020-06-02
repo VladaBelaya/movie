@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cardsContainer = document.querySelector('.catalog__cards')
-          arrowBtn = document.querySelector('.arrow-down');
+    const cardsContainer = document.querySelector('.catalog__cards'),
+          arrowBtn = document.querySelector('.arrow-down'),
+          points = document.querySelectorAll('.catalog__loading-point');
 
     const movieDb = [
         {
@@ -167,13 +168,25 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    const loading = () => {
+        let counter = 0;
+        setInterval(() => {
+            points[counter].classList.add('point-active')
+            counter++
+            if (counter === points.length) {
+                counter = 0
+            }
+            points[counter].classList.remove('point-active')
+        }, 666)
+    }
+
     arrowBtn.addEventListener('click', () => {
         arrowBtn.classList.toggle('arrow-active')
     })
 
     cardsTitle.forEach(x => checkLength(x, 20))
     cardsText.forEach(x => checkLength(x, 40))
-
+    loading()
 })
 
 
