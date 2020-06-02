@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             genre: 'Фантастика, боевик, приключения',
             rating: '4.7',
             image: './img/',
+            top: true
         },
         {
             name: 'Иллюзия обмана 2',
@@ -32,12 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
             genre: 'Фантастика, фэнтези, боевик, приключения',
             rating: '4.9',
             image: './img/',
+            top: true
         },
         {
             name: 'Первый мститель: Противостояние',
             genre: 'Фантастика, боевик, приключения',
             rating: '4.5',
             image: './img/',
+            top: true
         },
         {
             name: 'Алиса в Зазеркалье',
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             genre: 'Мультфильм, фэнтези, комедия, приключения, семейный',
             rating: '5.0',
             image: './img/',
+            top: true
         },
         {
             name: 'Моана',
@@ -137,7 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    movieDb.forEach((x, idx) => cardsContainer.innerHTML += $createCards(movieDb[idx], idx))
+    movieDb.forEach((x, idx) => {
+        cardsContainer.innerHTML += $createCards(movieDb[idx], idx)
+        if (x.top) {
+            document.querySelector('.top__rating').innerHTML +=
+                $createCards(movieDb[idx], idx)
+        }
+    })
 
     const card = document.querySelectorAll('.card'),
         closeBtn = document.querySelectorAll('.card__btn_close'),
