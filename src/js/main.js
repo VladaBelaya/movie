@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardsContainer = document.querySelector('.catalog__cards'),
-          arrowBtn = document.querySelector('.arrow-down'),
-          points = document.querySelectorAll('.catalog__loading-point');
+        arrowBtn = document.querySelector('.arrow-down'),
+        points = document.querySelectorAll('.catalog__loading-point'),
+        slideItems = document.querySelectorAll('.promo__decor');
 
     const movieDb = [
         {
@@ -171,17 +172,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const loading = () => {
         let counter = 0;
         setInterval(() => {
-            points[counter].classList.add('point-active')
+            points[counter].classList.remove('point-active')
             counter++
             if (counter === points.length) {
                 counter = 0
             }
-            points[counter].classList.remove('point-active')
-        }, 666)
+            points[counter].classList.add('point-active')
+        }, 380)
     }
 
     arrowBtn.addEventListener('click', () => {
         arrowBtn.classList.toggle('arrow-active')
+    })
+
+    slideItems.forEach((x, idx) => {
+        x.addEventListener('click', event => {
+        })
     })
 
     cardsTitle.forEach(x => checkLength(x, 20))
