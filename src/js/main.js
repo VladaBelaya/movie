@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 counter = 0
             }
             points[counter].classList.add('point-active')
-        }, 380)
+        }, 420)
     }
 
     arrowBtn.addEventListener('click', () => {
