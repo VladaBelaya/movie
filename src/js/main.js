@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardsContainer = document.querySelector('.catalog__cards'),
         arrowBtn = document.querySelector('.arrow-down'),
         points = document.querySelectorAll('.catalog__loading-point'),
-        slideItems = document.querySelectorAll('.promo__decor');
+        slideItems = document.querySelectorAll('.promo__decor'),
+        topRating = document.querySelector('.top__rating');
 
     const movieDb = [
         {
@@ -83,13 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
-    const $createCards = (data, idx) => {
-        const $el = `
+    const $createCards = (data) => {
+        return `
              <div class="card">
-             <div class="overlay isHide" style="background-image: url(${data.image}card_${idx + 1}.png);"></div>
+             <div class="overlay isHide" style="background-image: url(${data.image}"></div>
              <div class="card__face card__face--front">
                <div class="card__img">
-                 <img src="${data.image}card_${idx + 1}.png" alt="${data.name}" />
+                 <img src="${data.image}" alt="${data.name}" />
                </div>
                <div class="card__descrs">
                  <div class="card__descr">
@@ -130,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
              </div>
             </div>
  `
-        return $el
     }
 
     const checkLength = (selector, length) => {
@@ -143,12 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    movieDb.forEach((x, idx) => {
-        cardsContainer.innerHTML += $createCards(movieDb[idx], idx)
-        if (x.top) {
-            document.querySelector('.top__rating').innerHTML +=
-                $createCards(movieDb[idx], idx)
-        }
+    movieDb.filter((x, idx) => x.image += `card_${idx + 1}.png`)
+    const filterDb = movieDb.slice().sort((a, b) => b.rating - a.rating)
+
+    filterDb.forEach((x, idx) => {
+        cardsContainer.innerHTML += $createCards(x)
+        x.top
+            ? topRating.innerHTML += $createCards(x)
+            : false
     })
 
     const card = document.querySelectorAll('.card'),
