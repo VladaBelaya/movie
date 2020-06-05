@@ -8,13 +8,14 @@
             margin-right: 15px
             font-size: 24px
             color: rgba(36, 43, 45, 0.4)
+            cursor: pointer
             &:nth-child(4)
                 margin-right: 0
     &__blocks-two
         display: flex
         flex-direction: column
         justify-content: space-between
-        margin-right: 70px
+        margin-right: 90px
     &__info
         display: flex
         padding: 0
@@ -22,9 +23,16 @@
         li 
             color: rgba(36, 43, 45, 0.4)
             font-size: 24px       
-            margin-right: 7px   
+            margin-right: 7px      
             &:nth-child(3)
                 margin-right: 0
+    &__ul-link
+        color: rgba(36, 43, 45, 0.4)
+        transition: .3s all
+        &:hover
+            color: rgba(36, 43, 45, 0.8)
+            text-decoration: none     
+            
     &__descr
         margin-top: 60px
     &__block
