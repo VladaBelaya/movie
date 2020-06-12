@@ -19,9 +19,7 @@
             li 
                 font-size: 17px
                 margin-right: 15px
-                &:nth-child(4)
-                    margin-right: 10px
-                    padding-right: 10px
+                
         &__favorites
             font-size: 22px
             padding-right: 15px
@@ -44,7 +42,12 @@
                 li 
                     font-size: 24px
                     margin-right: 25px
-
+        &__cards
+            justify-content: space-around
+        &__banner
+            min-height: 385px
+        &__banner-text
+            font-size: 30px
 
     .footer
         &__blocks-two
@@ -54,3 +57,173 @@
             margin-top: 20px
         &__block
             margin-top: 30px
+    .top__rating
+        flex-wrap: wrap
+        justify-content: space-around
+@media (max-width:767px)
+    .header
+        &__login
+            display: none
+        &__input
+            display: block
+        &__item
+            &:nth-child(1)
+                margin-left: 30px
+                margin-right: 10px
+            &:nth-child(2)
+                margin: 0 10px
+            &:nth-child(3)
+                margin-left: 15px
+    .logo
+        font-size: 40px
+    .promo
+        .star
+            margin: 0
+        &__decor
+            &:nth-child(1)
+                margin-top: 5px
+        &__info
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+        &__buttons
+            margin-top: 25px
+        &__title
+            font-size: 40px
+            text-align: center
+        &__rating
+            justify-content: center
+            img
+                margin: 20px 5px 0 0
+        &__links
+            margin-top: 21px
+        &__ul
+            li
+                &:nth-child(4)
+                    margin-right: 0
+    .button
+        &_opacity
+            margin-right: 17px
+
+    .catalog
+        ul 
+            margin-top: 10px
+            margin-bottom: 0
+            
+            li 
+                margin: 0 13px 0 0
+                padding: 0
+                font-size: 16px
+                height: 30px
+                &:nth-child(6)
+                    margin-right: 0
+@media (max-width:575px)
+    .button
+        &_none
+            display: none
+    .logo
+        font-size: 26px
+    .header
+        img
+            width: 25px
+            height: 25px
+    .promo
+        
+        &__decor
+            background-color: rgba(255, 255, 255, 0.6)
+            &:nth-child(1)
+                margin-top: 20px
+        &__title
+            font-size: 25px
+        &__ul
+            display: flex
+            justify-content: center
+            li 
+                
+                font-size: 11px
+                margin-right: 5px
+        .star
+            img
+                width: 25px
+                height: 25px
+                margin-right: 3px
+                &:nth-child(5)
+                    margin-right: 10px
+        &__links
+            padding: 0 10px
+        &__favorites
+            font-size: 13px
+            border-right: 4px dotted #ffffff
+            padding-right: 10px
+    .button
+        padding: 5px 12px
+        font-size: 10px
+        border-radius: 3px
+        &_opacity
+            padding: 3px 12px
+            margin-left: 7px
+            margin-right: 5px
+    .catalog
+        &__menu
+            &::after
+                margin-top: 15px
+        &__ul
+            ul
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                li 
+                    font-size: 13px
+                    
+                    height: 20px
+        &__banner
+            padding: 0 10px
+            min-height: 265px
+        &__banner-text
+            font-size: 15px
+        &__loading-text
+            font-size: 20px
+        &__loading-points
+            height: 25px
+        &__loading-point
+            width: 10px
+            height: 10px
+    .card
+        min-height: 350px
+        &__img
+            img
+                height: 280px
+        &__descrs
+            height: 100px
+            padding: 20px 25px
+        &__title
+            font-size: 13px
+        &__text 
+            font-size: 11px
+        &__rating
+            padding: 0 8px
+            font-size: 16px
+    .footer
+        &__menu
+            li
+                font-size: 14px
+                margin-right: 10px
+        &__blocks-two
+            margin: 0
+        &__info
+            li 
+                font-size: 12px
+                margin-right: 5px
+        &__descr
+            margin-top: 5px
+        &__block
+            margin-top: 10px
+            justify-content: space-around
+            img
+                height: 25px
+                width: auto
+        &__item
+            margin: 0 10px
+    .logotipe
+        &_mini
+            font-size: 12px
