@@ -1,5 +1,5 @@
 {
-  "name": "movie",
+  "name": "js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VladaBelaya/movie.git"
+    "url": "git+https://github.com/VladaBelaya/JS_training.git"
   },
   "author": "Vlada",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VladaBelaya/movie/issues"
+    "url": "https://github.com/VladaBelaya/JS_training/issues"
   },
-  "homepage": "https://github.com/VladaBelaya/movie#readme"
+  "homepage": "https://github.com/VladaBelaya/JS_training#readme"
 }
