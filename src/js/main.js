@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slideItems = document.querySelectorAll('.promo__decor'),
         topRating = document.querySelector('.top__rating');
 
-    const movieDb = [
-        {
+    const movieDb = [{
             name: 'Фантастические твари',
             genre: 'Фэнтези, приключения, семейный',
             rating: '4.2',
@@ -113,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                        <div class="card__title_white">
                          ${data.name}
                        </div>
-                       <div class="card__text">${data.genre}</div>
+                       <div class="card__text card__text_back">${data.genre}</div>
                      </div>
                      <div class="card__rating card__rating_white">${data.rating}</div>
                    </div>
@@ -148,9 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterDb.forEach((x, idx) => {
         cardsContainer.innerHTML += $createCards(x)
-        x.top
-            ? topRating.innerHTML += $createCards(x)
-            : false
+        x.top ?
+            topRating.innerHTML += $createCards(x) :
+            false
     })
 
     const card = document.querySelectorAll('.card'),
@@ -188,13 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     slideItems.forEach((x, idx) => {
-        x.addEventListener('click', event => {
-        })
+        x.addEventListener('click', event => {})
     })
 
     cardsTitle.forEach(x => checkLength(x, 20))
     cardsText.forEach(x => checkLength(x, 40))
     loading()
 })
-
-
