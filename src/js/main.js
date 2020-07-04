@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardsContainer = document.querySelector('.catalog__cards'),
-        arrowBtn = document.querySelector('.arrow-down'),
         points = document.querySelectorAll('.catalog__loading-point'),
         slideItems = document.querySelectorAll('.promo__decor'),
         topRating = document.querySelector('.top__rating');
@@ -181,10 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
             points[counter].classList.add('point-active')
         }, 420)
     }
-
-    arrowBtn.addEventListener('click', () => {
-        arrowBtn.classList.toggle('arrow-active')
-    })
 
     slideItems.forEach((x, idx) => {
         x.addEventListener('click', event => {})
