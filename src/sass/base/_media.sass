@@ -225,3 +225,24 @@
         &__info
             li 
                 font-size: 20px
+@media ( max-width:575px )
+    .container
+        padding: 15px 25px 30px 25px
+    .header
+        &__logo
+            font-size: 25px
+        &__sign
+            &_none
+                display: none
+        .button
+            &_none
+                display: none
+        &__icon
+            display: block
+        &__item
+            margin: 0 10px
+            &:nth-child(3)
+                margin-left: 5px
+            img
+                height: 25px
+                width: auto
