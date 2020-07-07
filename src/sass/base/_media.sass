@@ -247,12 +247,15 @@
                 height: 25px
                 width: auto
     .promo
+        height: 450px
+        .container
+            min-height: 450px
         &__decors
             display: flex
             flex-direction: row
             justify-content: center
             align-items: flex-end
-            height: 90px
+            height: 190px
         &__decor
             width: 15px
             height: 6px
@@ -280,3 +283,12 @@
             &_opacity
                 padding: 1px 8px
                 margin: 0 5px
+    .catalog
+        ul
+            li 
+                font-size: 7px
+                margin-right: 5px
+                height: 25px
+        &__menu
+            &::after
+                top: 25px
