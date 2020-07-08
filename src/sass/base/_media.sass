@@ -291,6 +291,8 @@
                 font-size: 7px
                 margin-right: 5px
                 height: 25px
+        .ul_none
+            display: none
         &__menu
             &::after
                 top: 25px
@@ -304,6 +306,89 @@
             margin-bottom: 20px 
         &__loading-text
             font-size: 20px
+        .burger-menu
+            display: block
+            position: relative
+            &__button 
+                position: absolute 
+                width: 20px
+                height: 20px
+                z-index: 30
+            &__lines 
+                position: absolute
+                width: 18px
+                height: 3px
+                background-color: #0aaee4
+                top: 10px
+                left: 15px
+                transform: translate(-50%, -50%)
+                border-radius: 10%
+                &:hover
+                    filter: brightness(.8)
+                &::after 
+                    content: ''
+                    position: absolute
+                    width: 18px
+                    height: 3px
+                    background-color: #0aaee4
+                    top: -5px
+                    left: 9px
+                    transform: translate(-9px, -1px)
+                    border-radius: 10%
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 18px
+                    height: 3px
+                    background-color: #0aaee4
+                    top: 5px
+                    left: 9px
+                    transform: translate(-9px, 1px)
+                    border-radius: 10%
+            &_active .burger-menu__lines
+                background-color: transparent 
+            &_active .burger-menu__lines::before
+                top: 0
+                transform: rotate(45deg)
+            &_active .burger-menu__lines::after
+                top: 0
+                transform: rotate(-45deg)
+            &_active .burger-menu__nav
+                left: 0
+            &_active .burger-menu__overlay
+                display: block
+                
+            &__nav
+                padding: 40px 70px
+                position: fixed
+                display: flex
+                flex-direction: column
+                align-items: center
+                top: 55px
+
+                background-color: rgba(36, 36, 36, 0.8)
+                overflow-y: auto
+                left: -100%
+                z-index: 3
+            &__link
+                color: #ffffff   
+                padding: 10px
+                font-size: 17px
+                text-decoration: none
+                text-transform: uppercase
+                font-weight: 500
+                letter-spacing: 2px
+                transition: 0.3s all
+                &:hover
+                    color: #65edff
+            &__overlay
+                display: none
+                position: fixed
+                top: 0
+                left: 0
+                width: 100vw
+                height: 100vh
+                z-index: 2
     .card
         min-height: 400px
         width: 270px

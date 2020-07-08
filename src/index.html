@@ -29,12 +29,15 @@
             </div>
             <div class="header__item">
               <a href="#" class="header__sign header__sign_none">Войти</a>
-              <a href="" class="header__icon"><img src="./icons/entry.png" alt="Вход"></a>
+              <a href="" class="header__icon"
+                ><img src="./icons/entry.png" alt="Вход"
+              /></a>
             </div>
             <div class="header__item">
               <button class="button button_none">Регистрация</button>
-              <a href="" class="header__icon"><img src="./icons/regist.png" alt="Вход"></a>
-
+              <a href="" class="header__icon"
+                ><img src="./icons/regist.png" alt="Вход"
+              /></a>
             </div>
           </div>
         </header>
@@ -79,7 +82,21 @@
       <div class="container">
         <div class="catalog__menu">
           <div class="catalog__ul">
-            <ul>
+            <div class="burger-menu">
+              <a href="" class="burger-menu__button">
+                <span class="burger-menu__lines"></span>
+              </a>
+              <nav class="burger-menu__nav">
+                <a href="#" class="burger-menu__link">Тренды</a>
+                <a href="#" class="burger-menu__link">Высокий рейтинг</a>
+                <a href="#" class="burger-menu__link">Новинки</a>
+                <a href="#" class="burger-menu__link">Трейлеры</a>
+                <a href="#" class="burger-menu__link">Скоро</a>
+                <a href="#" class="burger-menu__link">Жанры</a>
+              </nav>
+              <div class="burger-menu__overlay"></div>
+            </div>
+            <ul class="ul_none">
               <li>Тренды</li>
               <li>Высокий рейтинг</li>
               <li>Новинки</li>
@@ -153,6 +170,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>
