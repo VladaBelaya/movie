@@ -286,6 +286,7 @@
                 padding: 1px 8px
                 margin: 0 5px
     .catalog
+        position: relative
         ul
             li 
                 font-size: 7px
@@ -309,11 +310,18 @@
         .burger-menu
             display: block
             position: relative
+            
+            
             &__button 
                 position: absolute 
                 width: 20px
                 height: 20px
-                z-index: 30
+                z-index: 20
+                transition: .4s
+                &_one
+                    position: absolute
+                    top: 10px
+                    left: 0
             &__lines 
                 position: absolute
                 width: 18px
@@ -345,6 +353,18 @@
                     left: 9px
                     transform: translate(-9px, 1px)
                     border-radius: 10%
+            &__nav
+                padding: 50px 80px
+                position: fixed
+                display: flex
+                flex-direction: column
+                align-items: center
+                top: -10px
+                width: 290px
+                background-color: rgba(36, 36, 36, 0.8)
+                overflow-y: auto
+                left: -100%
+                z-index: 3
             &_active .burger-menu__lines
                 background-color: transparent 
             &_active .burger-menu__lines::before
@@ -358,18 +378,7 @@
             &_active .burger-menu__overlay
                 display: block
                 
-            &__nav
-                padding: 40px 70px
-                position: fixed
-                display: flex
-                flex-direction: column
-                align-items: center
-                top: 55px
-
-                background-color: rgba(36, 36, 36, 0.8)
-                overflow-y: auto
-                left: -100%
-                z-index: 3
+           
             &__link
                 color: #ffffff   
                 padding: 10px
@@ -379,6 +388,7 @@
                 font-weight: 500
                 letter-spacing: 2px
                 transition: 0.3s all
+                text-align: center
                 &:hover
                     color: #65edff
             &__overlay
