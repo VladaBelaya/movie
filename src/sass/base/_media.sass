@@ -368,17 +368,28 @@
                 z-index: 3
             &_active .burger-menu__lines
                 background-color: transparent 
+                width: 55px
+                height: 10px
+                
             &_active .burger-menu__lines::before
+                width: 55px
+                height: 10px
                 top: 0
                 transform: rotate(45deg)
+                background-color: #fff
             &_active .burger-menu__lines::after
+                width: 55px
+                height: 10px
                 top: 0
                 transform: rotate(-45deg)
+                background-color: #fff
             &_active .burger-menu__nav
                 left: 0
             &_active .burger-menu__overlay
                 display: block
-                
+            &_active .burger-menu__button
+                position: fixed
+                left: 45%
            
             &__link
                 color: #ffffff   
